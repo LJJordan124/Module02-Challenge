@@ -1,112 +1,27 @@
-* {
-  box-sizing: border-box;
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed li {
+  text-indent: -5px;
+}
+ul.dashed li:before {
+  content: "-";
+  text-indent: -5px;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  min-height: var(--viewport-height);
+  min-width: 320px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  background-color: #E6B79D;
+  -webkit-text-size-adjust: none
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header {
-  background-image: radial-gradient(circle at 0%, #96d8e4b7,#5b73b6a6);
-  padding: 20px;
-  font-size: 20px;
-}
-
-header > nav > ul { /* I learned something new! */
-  display: inline-block;
-  transform: rotate(180deg);
-}
-
-header > nav > ul > li { 
-  transform: rotate(-180deg);
-  float: right;
-  list-style: none;
-  text-underline-position: under;
-}
-
-header > nav > ul > li > a {
+section {
   display: block;
-  padding: 15px;
-  font-size: 25px;
-}
-
-section > ul > li {
-  float: right;
-  list-style: none;
-  text-decoration: underline;
-  padding: 24px;
-  font-size: larger;
-}
-
-.column {
-  float: left;
-  padding: 21px;
-}
-
-.left {
-  width: 25%;
-  text-align: center;
-  border-right: solid;
-}
-
-.left-footer {
-  width: 25%;
-  text-align: center;
-  border-right: solid;
-  font-size: xx-large;
-  padding: 25px;
-}
-
-.right {
-  width: 75%;
-}
-
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
-
-.img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  float: left;
-  height: 300px;
-  width: 450px;
-  margin: 20px;
-}
-
-a > img:hover {
-  box-shadow: 0 0 2px 1px rgb(63, 59, 59);
-}
-
-@media screen and (max-width: 800px) {
-   .img , article > img {
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  section > ul {
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .left , .left-footer {
-    border-right: none;
-    text-align: center;
-  }
 }
